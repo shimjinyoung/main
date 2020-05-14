@@ -203,8 +203,7 @@
    - 예약 시 결제처리:  결제가 완료되지 않은 주문은 절대 받지 않는다는 경영자의 오랜 신념(?) 에 따라, ACID 트랜잭션 적용. 주문와료시 결제처리에 대해서는 Request-Response 방식 처리
    - 결제 완료시 점주연결 및 배송처리:  App(front) 에서 Store 마이크로서비스로 주문요청이 전달되는 과정에 있어서 Store 마이크로 서비스가 별도의 배포주기를 가지기 때문에 Eventual Consistency 방식으로 트랜잭션 처리함.
    - 나머지 모든 inter-microservice 트랜잭션: 주문상태, 배달상태 등 모든 이벤트에 대해 카톡을 처리하는 등, 데이터 일관성의 시점이 크리티컬하지 않은 모든 경우가 대부분이라 판단, Eventual Consistency 를 기본으로 채택함.
-
-
+   - ★ 객실 평가와 연계한 사업자 평가는 누락없이 반영이 되어야 한다.
 
 
 ## 헥사고날 아키텍처 다이어그램 도출
@@ -212,7 +211,7 @@
 
 ![image](https://user-images.githubusercontent.com/52994285/81779998-bb34f400-9530-11ea-9d41-5da175322c2f.png)
 
-![image](https://user-images.githubusercontent.com/36434874/81882332-76ab6600-95cd-11ea-9cad-2a3401921866.png)
+![image](https://user-images.githubusercontent.com/36434874/81882568-094c0500-95ce-11ea-937a-8f1958289d08.png)
 
 
     - Inbound adaptor와 Outbound adaptor를 구분함
@@ -235,6 +234,10 @@ cd PaymentManagement
 mvn spring-boot:run  
 
 cd gateway
+mvn spring-boot:run  
+
+★ 개인 과제 추가
+cd BizPartnerMng
 mvn spring-boot:run  
 ```
 
