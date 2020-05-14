@@ -212,7 +212,7 @@
 
 ![image](https://user-images.githubusercontent.com/52994285/81779998-bb34f400-9530-11ea-9d41-5da175322c2f.png)
 
-![image](https://user-images.githubusercontent.com/36434874/81882162-f84ec400-95cc-11ea-9567-c0a6dd9a31a1.png)
+![image](https://user-images.githubusercontent.com/36434874/81882332-76ab6600-95cd-11ea-9cad-2a3401921866.png)
 
 
     - Inbound adaptor와 Outbound adaptor를 구분함
